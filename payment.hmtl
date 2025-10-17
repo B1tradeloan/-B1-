@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>B1 — Membership Payment</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav class="topbar">
+    <div class="brand-row">
+      <img src="https://raw.githubusercontent.com/B1tradeloan/-B1-/2c5eabc5b4865597849d9cccb75a0f1338ae4c70/9E8563FD-308D-4E3B-96F4-86B831BAD402.png" alt="logo" class="logo-small"/>
+      <span class="brand-name">B1</span>
+    </div>
+    <div class="nav-right">
+      <a href="home.html" class="nav-link">HOME</a>
+      <a href="feedback.html" class="nav-link">FEEDBACK</a>
+      <button onclick="auth.logout()" class="btn ghost">Logout</button>
+    </div>
+  </nav>
+
+  <main class="container narrow">
+    <div class="card">
+      <h2>Membership Payment — ₱879.00</h2>
+      <p class="muted-small">Scan the QR code below using your banking / e-wallet app. After paying, upload the receipt on the next page.</p>
+
+      <div class="qr-wrap">
+        <img src="https://raw.githubusercontent.com/B1tradeloan/-B1-/2c5eabc5b4865597849d9cccb75a0f1338ae4c70/IMG_9339.jpeg" alt="QR code for B1 membership" class="qr" />
+      </div>
+
+      <dl class="muted-small">
+        <dt>Amount</dt><dd>₱879.00</dd>
+        <dt>Reference</dt><dd>Your phone number</dd>
+      </dl>
+
+      <div class="row gap">
+        <a href="receipt.html" id="iPaidBtn" class="btn primary">I’ve Sent the Payment (Upload Receipt)</a>
+        <a href="home.html" class="btn ghost">Cancel</a>
+      </div>
+
+      <p class="muted-small">If you need help, contact our Facebook page on the Contact page.</p>
+    </div>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script>
+    if (!auth.currentUser()) location.href = 'index.html';
+  </script>
+</body>
+</html>
