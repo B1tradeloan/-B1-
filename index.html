@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>B1 — Login</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" href="images/9E8563FD-308D-4E3B-96F4-86B831BAD402.png" />
+</head>
+<body class="page-center">
+  <main class="card auth-card">
+    <header class="brand">
+      <img src="https://raw.githubusercontent.com/B1tradeloan/-B1-/2c5eabc5b4865597849d9cccb75a0f1338ae4c70/9E8563FD-308D-4E3B-96F4-86B831BAD402.png" alt="B1 Logo" class="logo" />
+      <h1>B1</h1>
+    </header>
+
+    <form id="loginForm" class="form">
+      <label for="phone">Phone number</label>
+      <input id="phone" name="phone" type="tel" inputmode="numeric" placeholder="09XXXXXXXXX" required />
+
+      <label for="password">Password</label>
+      <input id="password" name="password" type="password" placeholder="Enter password" required />
+
+      <div class="row between">
+        <label class="checkbox">
+          <input id="remember" type="checkbox" />
+          <span>Remember me</span>
+        </label>
+        <a id="forgot" class="link" href="#" onclick="alert('Forgot password requires server-side flow.'); return false;">Forgot?</a>
+      </div>
+
+      <button id="loginBtn" class="btn primary">Log in</button>
+
+      <p class="muted">New here? Create account by clicking <a href="#" id="quickRegister">Register</a> (quick client-side demo).</p>
+    </form>
+
+    <footer class="muted-small">B1 • Investment • Trading • Loans</footer>
+  </main>
+
+  <script src="js/main.js"></script>
+  <script>
+    // auto-redirect if logged in
+    if (auth.currentUser()) location.href = 'home.html';
+  </script>
+</body>
+</html>
