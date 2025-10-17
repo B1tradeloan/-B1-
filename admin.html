@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Login — B1</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<main class="content card">
+<h2>Admin Login</h2>
+<input id="admin-username" placeholder="Username">
+<input id="admin-password" type="password" placeholder="Password">
+<button id="admin-login-btn">Log in</button>
+<p id="admin-status" class="muted"></p>
+</main>
+<script>
+const adminUser = "Admin";
+const adminPass = "09876543211234567890";
+document.getElementById("admin-login-btn").addEventListener("click", ()=>{
+  const u = document.getElementById("admin-username").value.trim();
+  const p = document.getElementById("admin-password").value.trim();
+  if(u===adminUser && p===adminPass){
+    localStorage.setItem("b1_admin_logged_in","true");
+    window.location.href="admin_dashboard.html";
+  } else {
+    document.getElementById("admin-status").textContent="Invalid credentials!";
+  }
+});
+</script>
+</body>
+</html>
